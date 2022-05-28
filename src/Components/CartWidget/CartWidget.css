@@ -1,0 +1,26 @@
+.cartWidget {
+  width: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 15px;
+  /* justify-content: ; */
+}
+
+.cartWidget:hover {
+  background-color: gray;
+}
+
+.cartIcon {
+  height: 25px;
+  width: 25px;
+  padding: 10px;
+}
+
+.cartQuantity {
+  color: white;
+  font-size: 20px;
+  font-weight: normal;
+  margin: 0;
+  padding-right: 10px;
+}

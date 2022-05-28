@@ -1,0 +1,10 @@
+.ItemListContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.greeting {
+  color: #fbbea4;
+  font-size: 45px;
+}

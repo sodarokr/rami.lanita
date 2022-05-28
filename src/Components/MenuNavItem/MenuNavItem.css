@@ -1,0 +1,13 @@
+.menuNavItem {
+  padding: 10px;
+}
+
+.menuNavItem-item {
+  color: white;
+  cursor: pointer;
+}
+
+.menuNavItem-item:hover {
+  color: #fbbea4;
+  text-decoration: underline;
+}
