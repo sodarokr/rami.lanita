@@ -1,0 +1,9 @@
+.ButtonSecundario {
+  color: #b1a9a1;
+  font-size: 13px;
+  border: 2px solid #b1a9a1;
+  background-color: white;
+  padding: 8px 0;
+  margin: 0 8px 10px 8px;
+  border-radius: 5px;
+}
