@@ -5,7 +5,10 @@ import MenuNav from "../MenuNav/MenuNav";
 const NavBar = () => {
   return (
     <div className="navBar">
-      <img src="/img/logoMain.png" className="logoMain" />
+      <img
+        src={process.env.PUBLIC_URL + "/img/logoMain.png"}
+        className="logoMain"
+      />
       <MenuNav />
       <CartWidget />
     </div>

@@ -5,7 +5,7 @@ const productos = [
     categoria: "Amigurumis",
     precio: 2500,
     stock: 40,
-    img: "/img/amigurumis/correcaminos.jpg",
+    img: process.env.PUBLIC_URL + "/img/amigurumis/correcaminos.jpg",
   },
   {
     id: "PC0001",
@@ -13,7 +13,7 @@ const productos = [
     categoria: "Colgantes",
     precio: 900,
     stock: 10,
-    img: "/img/colgantes/atrapasuenosmandala.jpg",
+    img: process.env.PUBLIC_URL + "/img/colgantes/atrapasuenosmandala.jpg",
   },
   {
     id: "PF0001",
@@ -21,7 +21,7 @@ const productos = [
     categoria: "Alfombras",
     precio: 2700,
     stock: 9,
-    img: "img/alfombras/alfombraojos.jpg",
+    img: process.env.PUBLIC_URL + "/img/alfombras/alfombraojos.jpg",
   },
   {
     id: "PT0001",
@@ -29,7 +29,8 @@ const productos = [
     categoria: "Trapillo",
     precio: 1900,
     stock: 21,
-    img: "/img/trapillo/combotrapillobienvenidabebe.jpg",
+    img:
+      process.env.PUBLIC_URL + "/img/trapillo/combotrapillobienvenidabebe.jpg",
   },
   {
     id: "PM0001",
@@ -37,7 +38,7 @@ const productos = [
     categoria: "Mantas de Apego",
     precio: 1600,
     stock: 4,
-    img: "/img/mantasdeapego/mantadeapegocaballo1.jpg",
+    img: process.env.PUBLIC_URL + "/img/mantasdeapego/mantadeapegocaballo1.jpg",
   },
   {
     id: "PB0001",
@@ -45,7 +46,9 @@ const productos = [
     categoria: "Accesorios Bebé",
     precio: 2300,
     stock: 27,
-    img: "/img/accesoriosjuguetesbebe/mordedormontessori.jpg",
+    img:
+      process.env.PUBLIC_URL +
+      "/img/accesoriosjuguetesbebe/mordedormontessori.jpg",
   },
 ];
 
