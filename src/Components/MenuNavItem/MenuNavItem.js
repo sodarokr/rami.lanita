@@ -1,9 +1,13 @@
 import "./MenuNavItem.css";
+import { Link } from "react-router-dom";
 
 const MenuNavItem = ({ text }) => {
+  const path = "/categoria/" + text;
   return (
     <div className="menuNavItem">
-      <a className="menuNavItem-item">{text}</a>
+      <Link to={path}>
+        <p className="menuNavItem-item">{text}</p>
+      </Link>
     </div>
   );
 };

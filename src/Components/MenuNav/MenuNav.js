@@ -8,7 +8,7 @@ const MenuNav = () => {
       <MenuNavItem text="Trapillo" />
       <MenuNavItem text="Colgantes" />
       <MenuNavItem text="Indumentaria Bebé" />
-      <MenuNavItem text="Tejidos de Punto" />
+      <MenuNavItem text="Tejidos" />
       <MenuNavItem text="Accesorios Bebé" />
       <MenuNavItem text="Apegos" />
     </div>

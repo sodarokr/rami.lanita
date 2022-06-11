@@ -3,14 +3,15 @@ import "./Item.css";
 import Counter from "../Counter/Counter";
 import ButtonSecundario from "../ButtonSecundario/ButtonSecundario";
 
-const Item = ({ img, stock, precio, nombre, categoria }) => {
+const Item = ({ img, stock, precio, nombre, categoria, encabezados }) => {
   const agregarAlCarrito = () => {
     console.log("Agregar al carrito está Pendiente de Implmentar");
   };
-
+  console.log("soy encabezado: ");
+  console.log(encabezados);
   return (
     <li className="Item">
-      <p className="Item__categoria">{categoria}</p>
+      {encabezados && <p className="Item__categoria">{categoria}</p>}
       <div className="Item__card">
         <img className="Item__card-img" src={img} />
         <p className="Item__card-nombre">{nombre}</p>

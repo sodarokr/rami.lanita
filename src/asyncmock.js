@@ -649,3 +649,11 @@ export const getProductos = () => {
     }, 2000);
   });
 };
+
+export const getProductosPorCategoria = (categoria) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(productos.filter((prod) => prod.categoria === categoria));
+    }, 2000);
+  });
+};
