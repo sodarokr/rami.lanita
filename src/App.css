@@ -9,11 +9,10 @@
   justify-content: start;
 }
 .App-body {
-  max-width: 1400px;
   margin: 0;
   display: grid;
   align-self: center;
-  grid-template-columns: 1fr 5fr 1fr;
-  /* background-color: coral; */
+  grid-template-columns: auto 1200px auto;
+
   justify-content: center;
 }

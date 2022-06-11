@@ -1,6 +1,6 @@
 .Item {
   border: 1px solid black;
-  max-width: 180px;
+  /* max-width: 180px; */
   margin: 5px;
   display: flex;
   flex-direction: column;
@@ -22,18 +22,19 @@
   justify-content: center;
   align-items: center;
   height: 40px;
-  background-color: #868d93;
   color: white;
+  background-color: #b1a9a1;
+  text-shadow: 1px 1px 1px #a3a1a1;
+
   text-align: center;
   font-size: 18px;
   font-weight: 400;
   border-bottom: 1px solid black;
 }
 .Item__card-img {
-  max-width: 175px;
-  min-width: 175px;
-  object-fit: contain;
   margin-bottom: 15px;
+  object-fit: cover;
+  width: 100%;
 }
 .Item__card-nombre {
   display: flex;
@@ -49,12 +50,28 @@
   font-size: 22px;
   font-weight: 600;
   text-align: center;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   color: #fbbea4;
 }
 .Item__card-stock {
   font-size: 12px;
   text-align: left;
   color: gray;
-  margin: 0 0 15px 10px;
+  margin-bottom: 10px;
+}
+.Item__card-contador {
+  margin: 0 15px 10px 15px;
+}
+.Item__card-botonAgregar {
+  margin: 0 15px 10px 15px;
+}
+.Item__card-verDetalle {
+  text-align: center;
+  margin-bottom: 15px;
+}
+.Item__card-verDetalle a {
+  color: #8a827b;
+  font-size: 13px;
+  font-weight: bold;
+  text-decoration: underline;
 }

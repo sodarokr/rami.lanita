@@ -657,3 +657,11 @@ export const getProductosPorCategoria = (categoria) => {
     }, 2000);
   });
 };
+
+export const getProductosPorId = (idProducto) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(productos.find((prod) => prod.id === idProducto));
+    }, 2000);
+  });
+};

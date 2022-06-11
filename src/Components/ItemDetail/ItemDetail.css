@@ -5,11 +5,15 @@
 
 .ItemDetail__imgContainer {
   grid-column: 1/5;
+
   padding: 30px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .ItemDetail__imgContainer-img {
   object-fit: cover;
-  width: 100%;
+  width: 80%;
 }
 
 .ItemDetail__descContainer {
@@ -17,6 +21,7 @@
   flex-direction: column;
   justify-content: space-between;
   grid-column: 5/7;
+  grid-row: 1/2;
   padding: 30px 24px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 8px;

@@ -1,4 +1,5 @@
 .ItemDetailContainer {
   grid-column: 2/3;
-  /* background-color: greenyellow; */
+  display: flex;
+  justify-content: center;
 }

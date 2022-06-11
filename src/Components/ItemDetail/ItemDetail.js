@@ -7,10 +7,7 @@ const ItemDetail = ({ img, categoria, nombre, precio, stock }) => {
   return (
     <div className="ItemDetail">
       <div className="ItemDetail__imgContainer">
-        <img
-          className="ItemDetail__imgContainer-img"
-          src={process.env.PUBLIC_URL + img}
-        ></img>
+        <img className="ItemDetail__imgContainer-img" src={img}></img>
       </div>
       <div className="ItemDetail__descContainer">
         <div className="ItemDetail__descContainer_producto">
@@ -33,7 +30,7 @@ const ItemDetail = ({ img, categoria, nombre, precio, stock }) => {
         </div>
         <div className="ItemDetail__descContainer_buttons">
           <p className="ItemDetail__descContainer_producto-stock">
-            <span className="stockDisponible">Stock Disponible: </span> {stock}
+            <span className="stockDisponible">Stock Disponible: </span> {stock}{" "}
             unidades.
           </p>
           <div className="ItemDetail__descContainer_producto-contador">
