@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+# Rami Tejidos
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este proyecto esta basado en el emprendimiento de mi hermana, llamado Rami.
 
-## Available Scripts
+El proyecto comenzó con la idea de trabajar desde casa para cuidar de su hija y mostrar a la sociedad el legado que mis abuelas y mi mamá pusieron en sus manos.
 
-In the project directory, you can run:
+Yo aporto mi pequeño grano de arena al asunto, y con este proyecto busco digitalizar su catalogo como primer MVP.
 
-### `npm start`
+## Demo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+https://github.com/sodarokr/rami.lanita/blob/main/public/loading.gif
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Construido con:
 
-### `npm test`
+- HTML5
+- CSS3
+- ReactJS
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Instalación
 
-### `npm run build`
+#### Clonar proyecto
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+En VS, abrir una terminal y luego tipear:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+  $ git clone https://github.com/sodarokr/rami.lanita
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### Instalar dependencias
 
-### `npm run eject`
+Acceder al directorio con `cd` y tipear:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+  $ npm install
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### Ejectuar el proyecto
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Tipear el comando:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+  $ npm start
+```
 
-## Learn More
+## Contribuciones
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Tus contribuciones son siempre bienvenidas!
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Ellas son las que hacen de la comunidad open source un inmejorable lugar para aprender, inspirarse y crear.
 
-### Code Splitting
+Si tenes una sugerencia que podria mejorar este proyecto, por favor hace fork del repo y crea una pull request.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+No te olvides de darle una estrella al proyecto!
+Muchas gracias!
 
-### Analyzing the Bundle Size
+1- Hacé Fork del Proyecto
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+2- Crea tu Branch de la feature (git checkout -b feature/TremendaFeature)
 
-### Making a Progressive Web App
+3- Commitea tus cambios (git commit -m 'añadí TremendaFeature')
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+4- Pushea la Branch (git push origin feature/TremendaFeature)
 
-### Advanced Configuration
+5- Abrí una Pull Request
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 🚀 Acerca de mi
 
-### Deployment
+Soy un Ingeniero en Sistemas cansado de años del Analisis y la Gestión de Proyectos, buscando encauzar mi ansiedad y obsesion por estudiar en ser un Full Stack Dev.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<img src="/rami.lanita/rami.lanita/public/rami1.gif" width="40" height="40" />
