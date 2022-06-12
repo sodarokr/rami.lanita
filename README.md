@@ -8,7 +8,9 @@ Yo aporto mi pequeño grano de arena al asunto, y con este proyecto busco digita
 
 ## Demo
 
-https://github.com/sodarokr/rami.lanita/blob/main/public/loading.gif
+https://github.com/sodarokr/rami.lanita/blob/main/public/rami1.gif
+
+<img src="/public/rami1.gif" width="40" height="40" />
 
 ## Construido con:
 
@@ -66,5 +68,3 @@ Muchas gracias!
 ## 🚀 Acerca de mi
 
 Soy un Ingeniero en Sistemas cansado de años del Analisis y la Gestión de Proyectos, buscando encauzar mi ansiedad y obsesion por estudiar en ser un Full Stack Dev.
-
-<img src="/rami.lanita/rami.lanita/public/rami1.gif" width="40" height="40" />
