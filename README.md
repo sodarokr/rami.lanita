@@ -10,7 +10,7 @@ Yo aporto mi pequeño grano de arena al asunto, y con este proyecto busco digita
 
 https://github.com/sodarokr/rami.lanita/blob/main/public/rami1.gif
 
-<img src="/public/rami1.gif" width="40" height="40" />
+<img src="/public/rami1.gif" />
 
 ## Construido con:
 
