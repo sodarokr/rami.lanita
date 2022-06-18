@@ -23,8 +23,11 @@
   grid-column: 5/7;
   grid-row: 1/2;
   padding: 30px 24px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  /* border: 1px solid rgba(0, 0, 0, 0.1); */
   border-radius: 8px;
+  -webkit-box-shadow: 0px 10px 13px -7px #000000,
+    0px 10px 25px 3px rgba(0, 0, 0, 0.26);
+  box-shadow: 0px 10px 13px -7px #000000, 0px 10px 25px 3px rgba(0, 0, 0, 0.26);
 }
 .ItemDetail__descContainer_producto-categoria {
   margin-bottom: 16px;

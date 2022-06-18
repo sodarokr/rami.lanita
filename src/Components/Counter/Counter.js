@@ -1,7 +1,8 @@
 import "./Counter.css";
+import ButtonSecundario from "../ButtonSecundario/ButtonSecundario";
 import { useState } from "react";
 
-const Counter = ({ valorInicial, stock }) => {
+const Counter = ({ valorInicial, stock, accionAgregar }) => {
   const [contador, setContador] = useState(valorInicial);
 
   const incrementar = () => {
@@ -13,19 +14,22 @@ const Counter = ({ valorInicial, stock }) => {
 
   return (
     <div className="Counter">
-      <button className="Counter__boton" onClick={decrementar}>
-        <img
-          className="Counter__boton-icon"
-          src={process.env.PUBLIC_URL + "/menos.png"}
-        />
-      </button>
-      <p className="Counter__cantidad">{contador}</p>
-      <button className="Counter__boton" onClick={incrementar}>
-        <img
-          className="Counter__boton-icon"
-          src={process.env.PUBLIC_URL + "/mas.png"}
-        />
-      </button>
+      <div className="Counter__contador">
+        <button className="Counter__contador_boton" onClick={decrementar}>
+          <img
+            className="Counter__contador_boton-icon"
+            src={process.env.PUBLIC_URL + "/menos.png"}
+          />
+        </button>
+        <p className="Counter__contador_cantidad">{contador}</p>
+        <button className="Counter__contador_boton" onClick={incrementar}>
+          <img
+            className="Counter__contador_boton-icon"
+            src={process.env.PUBLIC_URL + "/mas.png"}
+          />
+        </button>
+      </div>
+      <ButtonSecundario onClick={() => accionAgregar(contador)} />
     </div>
   );
 };

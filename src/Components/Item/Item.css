@@ -1,13 +1,13 @@
 .Item {
-  border: 1px solid black;
-  /* max-width: 180px; */
   margin: 5px;
   display: flex;
   flex-direction: column;
-  transition: all 0.3s, border 0.1s;
+  transition: all 0.3s;
+  -webkit-box-shadow: 0px 10px 13px -7px #000000,
+    0px 10px 25px 3px rgba(0, 0, 0, 0.26);
+  box-shadow: 0px 10px 13px -7px #000000, 0px 10px 25px 3px rgba(0, 0, 0, 0.26);
 }
 .Item:hover {
-  border: solid 1px #868d93b6;
   transform: scale(1.05);
 }
 .Item__card {
@@ -29,7 +29,7 @@
   text-align: center;
   font-size: 18px;
   font-weight: 400;
-  border-bottom: 1px solid black;
+  /* border-bottom: 1px solid black; */
 }
 .Item__card-img {
   margin-bottom: 15px;

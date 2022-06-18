@@ -1,6 +1,5 @@
 import Item from "../Item/Item";
 import "./ItemList.css";
-import Counter from "../Counter/Counter";
 
 const ItemList = ({ productos, categoria }) => {
   return (

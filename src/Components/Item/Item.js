@@ -21,12 +21,7 @@ const Item = ({ id, img, stock, precio, nombre, categoria, encabezados }) => {
         <p className="Item__card-precio">$ {precio}</p>
         <p className="Item__card-stock">Stock: {stock} unidades.</p>
       </div>
-      <div className="Item__card-contador">
-        <Counter valorInicial={0} stock={stock} />
-      </div>
-      <div className="Item__card-botonAgregar">
-        <ButtonSecundario accion={agregarAlCarrito} />
-      </div>
+
       <div className="Item__card-verDetalle">
         <Link to={"/detail/" + id}>Ver detalle</Link>
       </div>

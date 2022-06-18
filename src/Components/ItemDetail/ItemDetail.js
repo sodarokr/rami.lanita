@@ -1,9 +1,20 @@
 import "./ItemDetail.css";
 import { loremIpsum, LoremIpsum } from "lorem-ipsum";
 import Counter from "../Counter/Counter";
-import ButtonSecundario from "../ButtonSecundario/ButtonSecundario";
+import CartContext from "../../Context/CartContext";
+import { useContext, useState } from "react";
+import ButtonPrimario from "../ButtonPrimario/ButtonPrimario";
+import { Link } from "react-router-dom";
 
-const ItemDetail = ({ img, categoria, nombre, precio, stock }) => {
+const ItemDetail = ({ id, img, categoria, nombre, precio, stock }) => {
+  const { agregarProducto, isInCart } = useContext(CartContext);
+  const [cantidadSeleccionada, setCantidadSeleccionada] = useState(0);
+
+  const handleAgregarAlCarrito = (cantidad) => {
+    agregarProducto({ id, img, nombre, precio, cantidad });
+    setCantidadSeleccionada(cantidad);
+  };
+
   return (
     <div className="ItemDetail">
       <div className="ItemDetail__imgContainer">
@@ -34,12 +45,21 @@ const ItemDetail = ({ img, categoria, nombre, precio, stock }) => {
             unidades.
           </p>
           <div className="ItemDetail__descContainer_producto-contador">
-            <Counter valorInicial={0} stock={stock} />
-          </div>
-          <div className="ItemDetail__descContainer_producto-botonCarrito">
-            <ButtonSecundario
-              accion={() => console.log("Accion no implementada")}
-            />
+            {isInCart(id) || cantidadSeleccionada > 0 ? (
+              <Link to="/cart">
+                <ButtonPrimario
+                  accion={() => {}}
+                  tipoBoton="confirmar"
+                  texto="Terminar compra"
+                />
+              </Link>
+            ) : (
+              <Counter
+                valorInicial={0}
+                stock={stock}
+                accionAgregar={handleAgregarAlCarrito}
+              />
+            )}
           </div>
         </div>
       </div>

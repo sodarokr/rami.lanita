@@ -1,24 +1,29 @@
 .Counter {
   display: flex;
+  flex-direction: column;
+}
+.Counter__contador {
+  display: flex;
   justify-content: space-between;
   align-items: center;
   border: 1px solid #868d937e;
   border-radius: 5px;
+  margin-bottom: 10px;
 }
 
-.Counter__boton {
+.Counter__contador_boton {
   display: flex;
   justify-content: center;
   align-items: center;
   border: 0;
 }
 
-.Counter__boton-icon {
+.Counter__contador_boton-icon {
   width: 14px;
-  margin: 8px;
+  margin: 10px;
 }
 
-.Counter__cantidad {
+.Counter__contador_cantidad {
   font-size: 18px;
   font-weight: 600;
 }

@@ -1,7 +1,7 @@
 import "./ButtonSecundario.css";
-const ButtonSecundario = ({ accion }) => {
+const ButtonSecundario = ({ onClick }) => {
   return (
-    <button onClick={accion} className="ButtonSecundario">
+    <button onClick={onClick} className="ButtonSecundario">
       Agregar al carrito
     </button>
   );
