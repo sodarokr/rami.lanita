@@ -1,6 +1,10 @@
 import "./ItemListContainer.css";
 import ItemList from "../../Components/ItemList/ItemList";
-import { getProductos, getProductosPorCategoria } from "../../asyncmock";
+// import { getProductos, getProductosPorCategoria } from "../../asyncmock";
+import {
+  getProductos,
+  getProductosPorCategoria,
+} from "../../services/firebase/index";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
@@ -11,6 +15,7 @@ const ItemListContainer = ({ greeting }) => {
 
   useEffect(() => {
     setCargando(true);
+
     if (!idCategoria) {
       getProductos()
         .then((response) => {

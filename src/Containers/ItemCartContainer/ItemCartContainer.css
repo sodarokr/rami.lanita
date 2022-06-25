@@ -41,3 +41,10 @@
   gap: 35px;
   margin-bottom: 50px;
 }
+
+.ItemCartContainer__lista-NoProductos-titulo {
+  margin-bottom: 50px;
+}
+.ItemCartContainer__lista-NoProductos-botonVolverHome {
+  width: 500px;
+}

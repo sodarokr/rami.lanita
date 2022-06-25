@@ -11,8 +11,10 @@ const ItemDetail = ({ id, img, categoria, nombre, precio, stock }) => {
   const [cantidadSeleccionada, setCantidadSeleccionada] = useState(0);
 
   const handleAgregarAlCarrito = (cantidad) => {
-    agregarProducto({ id, img, nombre, precio, cantidad });
-    setCantidadSeleccionada(cantidad);
+    if (cantidad > 0) {
+      agregarProducto({ id, img, nombre, precio, cantidad });
+      setCantidadSeleccionada(cantidad);
+    }
   };
 
   return (

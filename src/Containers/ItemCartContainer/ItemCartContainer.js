@@ -3,10 +3,13 @@ import ItemCartList from "../../Components/ItemCartList/ItemCartList";
 import ButtonPrimario from "../../Components/ButtonPrimario/ButtonPrimario";
 import { useContext } from "react";
 import CartContext from "../../Context/CartContext";
+import { useNavigate } from "react-router-dom";
 
 const ItemCartContainer = () => {
   const { vaciarCarrito, cantidadEnCarrito, totalEnCarrito } =
     useContext(CartContext);
+
+  const navigate = useNavigate();
 
   return (
     <div className="App-body">
@@ -41,9 +44,18 @@ const ItemCartContainer = () => {
             </div>
           </>
         ) : (
-          <h2 className="ItemCartContainer__lista-NoProductos">
-            No hay productos para mostrar aquí
-          </h2>
+          <>
+            <h2 className="ItemCartContainer__lista-NoProductos-titulo">
+              No hay productos para mostrar aquí
+            </h2>
+            <div className="ItemCartContainer__lista-NoProductos-botonVolverHome">
+              <ButtonPrimario
+                accion={() => navigate("/")}
+                texto="Volver a Home"
+                tipoBoton={"primario"}
+              />
+            </div>
+          </>
         )}
       </div>
     </div>

@@ -2,8 +2,17 @@ import "./NavBar.css";
 import CartWidget from "../CartWidget/CartWidget";
 import MenuNav from "../MenuNav/MenuNav";
 import { Link } from "react-router-dom";
+import CartContext from "../../Context/CartContext";
+import { useContext, useEffect, useState } from "react";
 
 const NavBar = () => {
+  const { cantidadEnCarrito } = useContext(CartContext);
+  const [carritoVacio, setCarritoVacio] = useState(true);
+
+  useEffect(() => {
+    setCarritoVacio(cantidadEnCarrito > 0 ? false : true);
+  }, [cantidadEnCarrito]);
+
   return (
     <div className="navBar">
       <Link to="/">
@@ -13,7 +22,7 @@ const NavBar = () => {
         />
       </Link>
       <MenuNav />
-      <CartWidget />
+      {!carritoVacio && <CartWidget />}
     </div>
   );
 };
