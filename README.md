@@ -1,6 +1,6 @@
 # Rami Tejidos
 
-Este proyecto esta basado en el emprendimiento de mi hermana, llamado Rami.
+Este proyecto es una suerte de Ecommerce, basado en el emprendimiento de tejido a crochet de mi hermana menor, llamado Rami.
 
 El proyecto comenzó con la idea de trabajar desde casa para cuidar de su hija y mostrar al mundo el legado que mis abuelas y mi mamá pusieron en sus manos a traves del tejido.
 
