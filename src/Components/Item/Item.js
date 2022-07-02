@@ -5,10 +5,6 @@ import ButtonSecundario from "../ButtonSecundario/ButtonSecundario";
 import { Link } from "react-router-dom";
 
 const Item = ({ id, img, stock, precio, nombre, categoria, encabezados }) => {
-  const agregarAlCarrito = () => {
-    console.log("Agregar al carrito está Pendiente de Implmentar");
-  };
-
   return (
     <li className="Item">
       {encabezados && <p className="Item__categoria">{categoria}</p>}

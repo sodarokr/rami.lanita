@@ -7,7 +7,7 @@
 }
 
 .greeting {
-  color: #fbbea4;
+  color: var(--color-primario);
   font-size: 45px;
   margin-bottom: 50px;
 }
@@ -26,7 +26,7 @@
 .ItemCartContainer__total-monto {
   font-size: 40px;
   font-weight: 800;
-  color: #fbbea4;
+  color: var(--color-primario);
 }
 .ItemCartContainer__acciones {
   width: 100%;

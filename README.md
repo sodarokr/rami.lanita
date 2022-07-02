@@ -2,19 +2,19 @@
 
 Este proyecto esta basado en el emprendimiento de mi hermana, llamado Rami.
 
-El proyecto comenzó con la idea de trabajar desde casa para cuidar de su hija y mostrar a la sociedad el legado que mis abuelas y mi mamá pusieron en sus manos.
+El proyecto comenzó con la idea de trabajar desde casa para cuidar de su hija y mostrar al mundo el legado que mis abuelas y mi mamá pusieron en sus manos a traves del tejido.
 
 Yo aporto mi pequeño grano de arena al asunto, y con este proyecto busco digitalizar su catalogo como primer MVP.
 
 ## Demo
 
-<img src="/public/rami1.gif" />
+<img src="/public/rami.gif" />
 
 ## Construido con:
 
-- HTML5
-- CSS3
-- ReactJS
+- [Create-React-App](https://create-react-app.dev)
+- [Firebase](https://firebase.com)
+- [SweetAlert2](https://sweetalert2.github.io)
 
 ## Instalación
 
@@ -41,6 +41,10 @@ Tipear el comando:
 ```bash
   $ npm start
 ```
+
+## Variables de Entorno
+
+Ver [´.env.example´]
 
 ## Contribuciones
 

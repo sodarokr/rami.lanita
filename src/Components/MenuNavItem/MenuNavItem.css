@@ -10,6 +10,6 @@ a {
 }
 
 .menuNavItem-item:hover {
-  color: #fbbea4;
+  color: var(--color-primario);
   text-decoration: underline;
 }

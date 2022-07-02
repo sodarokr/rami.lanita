@@ -1,7 +1,7 @@
 .ButtonSecundario {
-  color: #b1a9a1;
+  color: var(--color-terciario);
   font-size: 13px;
-  border: 2px solid #b1a9a1;
+  border: 2px solid var(--color-terciario);
   background-color: rgba(255, 255, 255, 0);
   padding: 10px 0;
   width: 100%;

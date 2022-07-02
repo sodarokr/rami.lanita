@@ -47,7 +47,7 @@
 .descripcion-detallePedido-cantidad {
   font-size: 20px;
   font-weight: 800;
-  color: #fbbea4;
+  color: var(--color-primario);
 }
 .ItemCart__descripcion-detallePedido-cantidad {
   grid-column: 1/2;

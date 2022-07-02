@@ -44,7 +44,7 @@
   font-weight: 600;
   text-align: lef;
   margin-bottom: 35px;
-  color: #fbbea4;
+  color: var(--color-primario);
 }
 .ItemDetail__descContainer_producto-descripcion-titulo {
   font-size: 18px;

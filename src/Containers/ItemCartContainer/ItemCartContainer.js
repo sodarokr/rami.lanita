@@ -4,12 +4,29 @@ import ButtonPrimario from "../../Components/ButtonPrimario/ButtonPrimario";
 import { useContext } from "react";
 import CartContext from "../../Context/CartContext";
 import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const ItemCartContainer = () => {
-  const { vaciarCarrito, cantidadEnCarrito, totalEnCarrito } =
+  const { vaciarCarrito, cantidadEnCarrito, totalEnCarrito, carrito } =
     useContext(CartContext);
 
   const navigate = useNavigate();
+
+  const limpiarCarrito = () => {
+    vaciarCarrito();
+    const notificacion = Swal.mixin({
+      toast: true,
+      position: "top-end",
+      showConfirmButton: false,
+      timer: 2000,
+      timerProgressBar: true,
+    });
+
+    notificacion.fire({
+      icon: "warning",
+      title: "Se quitaron todos los artículos del carrito.",
+    });
+  };
 
   return (
     <div className="App-body">
@@ -31,12 +48,12 @@ const ItemCartContainer = () => {
             <div className="ItemCartContainer__acciones">
               <div className="ItemCartContainer__acciones_botonera">
                 <ButtonPrimario
-                  accion={() => vaciarCarrito()}
+                  accion={limpiarCarrito}
                   texto="Quitar todos"
                   tipoBoton={"danger"}
                 />
                 <ButtonPrimario
-                  accion={() => {}}
+                  accion={() => navigate("/checkout")}
                   texto="Terminar compra"
                   tipoBoton={"confirmar"}
                 />

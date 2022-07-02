@@ -2,9 +2,26 @@ import "./ItemCart.css";
 import ButtonPrimario from "../ButtonPrimario/ButtonPrimario";
 import { useContext } from "react";
 import CartContext from "../../Context/CartContext";
+import Swal from "sweetalert2";
 
 const ItemCart = ({ id, img, nombre, cantidad, precio }) => {
   const { quitarProducto } = useContext(CartContext);
+
+  const quitarProductoCarrito = (id) => {
+    quitarProducto(id);
+    const notificacion = Swal.mixin({
+      toast: true,
+      position: "top-end",
+      showConfirmButton: false,
+      timer: 2000,
+      timerProgressBar: true,
+    });
+
+    notificacion.fire({
+      icon: "warning",
+      title: "Artículo eliminado",
+    });
+  };
 
   return (
     <div className="ItemCart">
@@ -40,7 +57,7 @@ const ItemCart = ({ id, img, nombre, cantidad, precio }) => {
       </div>
       <div className="ItemCart__botones">
         <ButtonPrimario
-          accion={() => quitarProducto(id)}
+          accion={() => quitarProductoCarrito(id)}
           tipoBoton={"danger"}
           texto="Quitar"
         />

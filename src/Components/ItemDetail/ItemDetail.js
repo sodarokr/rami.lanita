@@ -5,6 +5,7 @@ import CartContext from "../../Context/CartContext";
 import { useContext, useState } from "react";
 import ButtonPrimario from "../ButtonPrimario/ButtonPrimario";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const ItemDetail = ({ id, img, categoria, nombre, precio, stock }) => {
   const { agregarProducto, isInCart } = useContext(CartContext);
@@ -14,6 +15,18 @@ const ItemDetail = ({ id, img, categoria, nombre, precio, stock }) => {
     if (cantidad > 0) {
       agregarProducto({ id, img, nombre, precio, cantidad });
       setCantidadSeleccionada(cantidad);
+      const notificacion = Swal.mixin({
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 2000,
+        timerProgressBar: true,
+      });
+
+      notificacion.fire({
+        icon: "success",
+        title: "Artículo agregado",
+      });
     }
   };
 

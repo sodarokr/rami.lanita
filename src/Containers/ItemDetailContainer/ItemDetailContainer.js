@@ -1,7 +1,7 @@
 import ItemDetail from "../../Components/ItemDetail/ItemDetail";
 import "./ItemDetailContainer.css";
 // import { getProductosPorId } from "../../asyncmock";
-import { getProductosPorId } from "../../services/firebase";
+import { getProductoPorId } from "../../services/firebase";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
@@ -12,7 +12,7 @@ const ItemDetailContainer = () => {
 
   useEffect(() => {
     setCargando(true);
-    getProductosPorId(idProducto)
+    getProductoPorId(idProducto)
       .then((response) => {
         setProducto(response);
       })

@@ -8,15 +8,18 @@ import {
   where,
   query,
   doc,
+  addDoc,
+  writeBatch,
+  documentId,
 } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCmGutVZ-PcZzsw7av_dHvkglug4Ux6J9s",
-  authDomain: "rami-lanita.firebaseapp.com",
-  projectId: "rami-lanita",
-  storageBucket: "rami-lanita.appspot.com",
-  messagingSenderId: "380396886310",
-  appId: "1:380396886310:web:6e71a6b8039ffc1e5309e7",
+  apiKey: process.env.REACT_APP_apiKey,
+  authDomain: process.env.REACT_APP_authDomain,
+  projectId: process.env.REACT_APP_projectId,
+  storageBucket: process.env.REACT_APP_storageBucket,
+  messagingSenderId: process.env.REACT_APP_messagingSenderId,
+  appId: process.env.REACT_APP_appId,
 };
 
 // Initialize Firebase
@@ -24,23 +27,57 @@ const app = initializeApp(firebaseConfig);
 
 const db = getFirestore(app);
 
+const coleccionOrdenes = "ordenes";
+const coleccionProductos = "productos";
+
+const refColeccionOrdenes = collection(db, "ordenes");
+const refColeccionProductos = collection(db, "productos");
+
+export const guardarOrden = (orden) => {
+  return añadirObjetoAFirestore(refColeccionOrdenes, orden);
+};
+
+export const guardarProducto = (producto) => {
+  return añadirObjetoAFirestore(refColeccionProductos, producto);
+};
+
+const añadirObjetoAFirestore = (refCollection, objeto) => {
+  return addDoc(refCollection, objeto);
+};
+
+export const getProductosCatalogo = (ids) => {
+  return getDocumentosByID(ids, refColeccionProductos);
+};
+
+const getDocumentosByID = (ids, refColeccion) => {
+  return getDocs(query(refColeccion, where(documentId(), "in", ids)));
+};
+
+export const confirmarOrden = (productosOrden) => {
+  const batch = writeBatch(db);
+
+  for (let prod of productosOrden) {
+    batch.update(prod.referencia, { stock: prod.nuevoStock });
+  }
+  batch.commit();
+};
+
 const getProductosFormateados = (productosFirebase) => {
   const productosFormateados = productosFirebase.docs.map((prod) => {
     return { id: prod.id, ...prod.data() };
   });
-  // console.log(productosFormateados);
   return productosFormateados;
 };
 
 export const getProductos = () => {
-  return getDocs(collection(db, "productos")).then((response) => {
+  return getDocs(refColeccionProductos).then((response) => {
     return getProductosFormateados(response);
   });
 };
 
 export const getProductosPorCategoria = (categoria) => {
   return getDocs(
-    query(collection(db, "productos"), where("categoria", "==", categoria))
+    query(refColeccionProductos, where("categoria", "==", categoria))
   )
     .then((response) => {
       const prods = getProductosFormateados(response);
@@ -52,8 +89,8 @@ export const getProductosPorCategoria = (categoria) => {
     });
 };
 
-export const getProductosPorId = (idProducto) => {
-  return getDoc(doc(db, "productos", idProducto))
+export const getProductoPorId = (idProducto) => {
+  return getDoc(doc(db, coleccionProductos, idProducto))
     .then((response) => {
       return { id: response.id, ...response.data() };
     })

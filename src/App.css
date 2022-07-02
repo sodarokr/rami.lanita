@@ -3,16 +3,25 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 .App {
   display: flex;
   flex-direction: column;
   justify-content: start;
+  background-color: #fcfefc;
 }
 .App-body {
   margin: 0;
   display: grid;
   align-self: center;
   grid-template-columns: auto 1200px auto;
-
+  background-color: #fcfefc;
   justify-content: center;
+}
+
+:root {
+  --color-primario: #fbbea4;
+  --color-secundario: #868d93;
+  --color-terciario: #b1a9a1;
+  background-color: #fcfefc;
 }

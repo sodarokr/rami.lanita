@@ -8,7 +8,7 @@
 }
 
 .greeting {
-  color: #fbbea4;
+  color: var(--color-primario);
   font-size: 45px;
   margin-bottom: 50px;
 }

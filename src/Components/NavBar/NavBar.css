@@ -7,9 +7,9 @@
 }
 
 .navBar {
-  background-color: #868d93;
+  background-color: var(--color-secundario);
   min-height: 70px;
   display: flex;
   justify-content: flex-end;
-  margin-bottom: 75px;
+  margin-bottom: 50px;
 }

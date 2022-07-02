@@ -23,7 +23,7 @@
   align-items: center;
   height: 40px;
   color: white;
-  background-color: #b1a9a1;
+  background-color: var(--color-terciario);
   text-shadow: 1px 1px 1px #a3a1a1;
 
   text-align: center;
@@ -51,7 +51,7 @@
   font-weight: 600;
   text-align: center;
   margin-bottom: 15px;
-  color: #fbbea4;
+  color: var(--color-primario);
 }
 .Item__card-stock {
   font-size: 12px;
