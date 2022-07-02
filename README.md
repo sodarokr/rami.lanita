@@ -6,15 +6,76 @@ El proyecto comenzó con la idea de trabajar desde casa para cuidar de su hija y
 
 Yo aporto mi pequeño grano de arena al asunto, y con este proyecto busco digitalizar su catalogo como primer MVP.
 
-## Demo
+# Demo
 
 <img src="/public/rami.gif" />
+
+# Navegación del proyecto
+
+El proyecto esta estructurado con la siguientes secciones, renderizando componentes especificos en las siguientes rutas:
+
+- **Sección Home**
+
+  - **Ruta**: "/"
+  - **Componente**: ItemListContainer
+    - **Componentes**: ItemList
+      - **Componentes**: Item
+
+- **Sección Categoría**
+
+  - **Ruta**: "/categoria/:idCategoria"
+  - **Componente Contenedor**: ItemListContainer
+    - **Componentes**: ItemList
+      - **Componentes**: Item
+
+- **Sección Detalle de Producto**
+
+  - **Ruta**: "/detail/:idProducto"
+  - **Componente Contenedor**: ItemDetailContainer
+    - **Componentes**: ItemDetail
+      - **Componentes**: Counter
+      - **Componentes**: ButtonPrimario
+
+- **Sección Carrito de Compras**
+
+  - **Ruta**: "/cart/"
+  - **Componente**: ItemCartContainer
+    - **Componentes**: ButtonPrimario
+    - **Componentes**: ItemCartList
+      - **Componentes**: ItemCart
+        - **Componentes**: ButtonPrimario
+
+- **Sección Checkout**
+  - **Ruta**: "/checkout/"
+  - **Componente**: CheckoutContainer
+    - **Componentes**: ButtonPrimario
 
 ## Construido con:
 
 - [Create-React-App](https://create-react-app.dev)
 - [Firebase](https://firebase.com)
 - [SweetAlert2](https://sweetalert2.github.io)
+
+## Objetos Firebase
+
+Se utilizaron los siguientes dos tipos de Documentos:
+
+- **Ordenes**
+
+  - Comprador
+    - direccion
+    - email
+    - nombre
+    - telefono
+  - Items (Array de Productos)
+  - Total
+
+- **Productos**
+  - categoria
+  - img (hosteada en Imgur)
+  - nombre
+  - precio
+  - stock
 
 ## Instalación
 
@@ -44,7 +105,7 @@ Tipear el comando:
 
 ## Variables de Entorno
 
-Ver [´.env.example´]
+Ver [`.env.example`](https://github.com/sodarokr/rami.lanita/blob/main/.env.example)
 
 ## Contribuciones
 
@@ -69,4 +130,6 @@ Muchas gracias!
 
 ## 🚀 Acerca de mi
 
-Soy un Ingeniero en Sistemas cansado de años del Analisis y la Gestión de Proyectos, buscando encauzar mi ansiedad y obsesion por estudiar en ser un Full Stack Dev.
+Soy un Ingeniero en Sistemas ya cansado de trabajar tantos años como Analista Funcional, Product Owner y Project Manager, buscando encauzar mi ansiedad y obsesion por estudiar en ser un Full Stack Dev.
+
+Soy compositor y músico autodidacta tambien! 🎼🎵🎸🎙
