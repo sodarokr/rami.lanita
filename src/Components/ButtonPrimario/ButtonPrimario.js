@@ -4,13 +4,15 @@ const ButtonPrimario = ({ accion, tipoBoton, texto }) => {
     switch (tipoBoton) {
       case "primario":
         return "ButtonPrimario ButtonPrimarioAceptar";
-        break;
+
       case "danger":
         return "ButtonPrimario ButtonPrimarioDanger";
-        break;
+
       case "confirmar":
         return "ButtonPrimario ButtonPrimarioConfirma";
-        break;
+
+      default:
+        return "ButtonPrimario ButtonPrimarioAceptar";
     }
   };
 

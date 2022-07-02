@@ -1,6 +1,5 @@
 import "./ItemListContainer.css";
 import ItemList from "../../Components/ItemList/ItemList";
-// import { getProductos, getProductosPorCategoria } from "../../asyncmock";
 import {
   getProductos,
   getProductosPorCategoria,

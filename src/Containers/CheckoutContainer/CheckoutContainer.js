@@ -22,6 +22,21 @@ const CheckoutContainer = () => {
     telefono: "",
   });
 
+  const getFecha = () => {
+    let fecha = new Date();
+    let dia =
+      fecha.getFullYear() +
+      "-" +
+      (fecha.getMonth() + 1) +
+      "-" +
+      fecha.getDate();
+
+    let hora =
+      fecha.getHours() + ":" + fecha.getMinutes() + ":" + fecha.getSeconds();
+
+    return dia + " " + hora;
+  };
+
   const handleChange = (evt) => {
     const { target } = evt;
     const { name, value } = target;
@@ -34,7 +49,7 @@ const CheckoutContainer = () => {
     let isIncomplete = false;
 
     for (const valor in valores) {
-      if (valores[valor] == "") {
+      if (valores[valor] === "") {
         isIncomplete = true;
       }
     }
@@ -93,6 +108,7 @@ const CheckoutContainer = () => {
               email: valores.correo,
               telefono: valores.telefono,
               direccion: valores.direccion,
+              fecha: getFecha(),
             },
             items: carrito,
             total: totalEnCarrito,

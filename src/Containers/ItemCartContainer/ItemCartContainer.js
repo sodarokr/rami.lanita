@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const ItemCartContainer = () => {
-  const { vaciarCarrito, cantidadEnCarrito, totalEnCarrito, carrito } =
+  const { vaciarCarrito, cantidadEnCarrito, totalEnCarrito } =
     useContext(CartContext);
 
   const navigate = useNavigate();

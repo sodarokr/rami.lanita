@@ -1,5 +1,5 @@
 import "./ItemDetail.css";
-import { loremIpsum, LoremIpsum } from "lorem-ipsum";
+import { loremIpsum } from "lorem-ipsum";
 import Counter from "../Counter/Counter";
 import CartContext from "../../Context/CartContext";
 import { useContext, useState } from "react";

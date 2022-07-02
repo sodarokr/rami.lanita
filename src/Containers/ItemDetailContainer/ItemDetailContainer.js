@@ -1,6 +1,5 @@
 import ItemDetail from "../../Components/ItemDetail/ItemDetail";
 import "./ItemDetailContainer.css";
-// import { getProductosPorId } from "../../asyncmock";
 import { getProductoPorId } from "../../services/firebase";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";

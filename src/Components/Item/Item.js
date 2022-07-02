@@ -1,7 +1,4 @@
-import react from "react";
 import "./Item.css";
-import Counter from "../Counter/Counter";
-import ButtonSecundario from "../ButtonSecundario/ButtonSecundario";
 import { Link } from "react-router-dom";
 
 const Item = ({ id, img, stock, precio, nombre, categoria, encabezados }) => {

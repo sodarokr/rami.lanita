@@ -30,8 +30,8 @@ const db = getFirestore(app);
 const coleccionOrdenes = "ordenes";
 const coleccionProductos = "productos";
 
-const refColeccionOrdenes = collection(db, "ordenes");
-const refColeccionProductos = collection(db, "productos");
+const refColeccionOrdenes = collection(db, coleccionOrdenes);
+const refColeccionProductos = collection(db, coleccionProductos);
 
 export const guardarOrden = (orden) => {
   return añadirObjetoAFirestore(refColeccionOrdenes, orden);
@@ -81,7 +81,6 @@ export const getProductosPorCategoria = (categoria) => {
   )
     .then((response) => {
       const prods = getProductosFormateados(response);
-      // console.log(prods);
       return prods;
     })
     .catch((error) => {
